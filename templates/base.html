@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Scottish castles</title>
+<link href="{{ url_for('static', filename='bootstrap-4/css/bootstrap.min.css') }}" rel="stylesheet" />
+<link href="{{ url_for('static', filename='bootstrap-4/js/bootstrap.min.js') }}" />
+</head>
+<body>
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{{ url_for('root') }}">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="">About</a>
+        <a class="nav-item nav-link" href="{{ url_for('results') }}">Castles</a>
+        <a class="nav-item nav-link" href="{{ url_for('upload') }}">Upload</a>
+      </div>
+    </div>
+  </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Albanach Caisleáin</h1>
+        <p class="lead">This is Scotland.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+
+        {% block content %} {% endblock %}
+
+    </div>
+  </div>
+  <footer class="footer" style="background-color:black">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,57 +1,41 @@
-<html>
-<head>
-<title>Bootstrap Demonstation</title>
-<link href="{{ url_for('static', filename='bootstrap-4/css/bootstrap.min.css') }}" rel="stylesheet" />
-<link href="{{ url_for('static', filename='bootstrap-4/js/bootstrap.min.js') }}" />
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#">Features</a>
-        <a class="nav-item nav-link" href="#">Pricing</a>
-        <a class="nav-item nav-link disabled" href="#">Disabled</a>
-      </div>
-    </div>
-  </nav>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-3">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-3">
-    <form action = "/upload" method = "POST">
-            <div class="form-group">
-              <label for="castle_name">Castle name</label>
-              <input type="text" class="form-control" id="castle" name="castle" placeholder="Castle name">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Region</label>
-              <input type="text" class="form-control" id="region" name="region" placeholder="Region">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Clan</label>
-              <input type="text" class="form-control" id="clan" name="clan" placeholder="Clan">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Date built</label>
-              <input type="date" class="form-control" id="date" name="date" placeholder="date">
-            </div>
-            <div class="form-check">
+{% extends "base.html" %}
 
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-        </div>
-      </div>
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <form action = "" method = "POST">
+              <div class="form-group">
+                <label for="castle_name">Castle name</label>
+                <input type="text" class="form-control" id="castle" name="castle" placeholder="Castle name" required="true">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Region</label>
+                <input type="text" class="form-control" id="region" name="region" placeholder="Region" required="true">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Clan</label>
+                <input type="text" class="form-control" id="clan" name="clan" placeholder="Clan" required="true">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Date built</label>
+                <input type="date" class="form-control" id="date" name="date" placeholder="date" required="true">
+              </div>
+              <div class="form-check">
+
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-</body>
-</html>
+    <div class="col-4">
+            {% with messages = get_flashed_messages () %}
+              {% if messages %}
+                    {% for message in messages %}
+                    {{ message | safe }}
+                    {% endfor %}
+                {% endif %}
+              {% endwith %}
+    </div>
+  </div>
+</div>
+{% endblock %}}
