@@ -10,9 +10,15 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="{{ url_for('root') }}">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="">About</a>
+        <a class="nav-item nav-link" href="{{ url_for('regions') }}">Regions</a>
         <a class="nav-item nav-link" href="{{ url_for('results') }}">Castles</a>
-        <a class="nav-item nav-link" href="{{ url_for('upload') }}">Upload</a>
+        <a class="nav-item nav-link" href="{{ url_for('upload') }}">Add a castle</a>
+        {% if session['logged_in'] %}
+        <a class="nav-item nav-link" href="{{ url_for('logout') }}">logout</a>
+        {% else %}
+        <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+        {% endif %}
+
       </div>
     </div>
   </nav>
@@ -30,9 +36,10 @@
 
     </div>
   </div>
+  <br>
   <footer class="footer" style="background-color:black">
       <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <span class="text-muted">Coursework 1 - 40086764 - Angelos Athanasakos</span>
       </div>
     </footer>
 </body>

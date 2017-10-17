@@ -1,0 +1,31 @@
+[{
+  "Edinburgh": [
+    {
+        "Castle": "Dunbar",
+        "Clan": "outand",
+        "Date": "never",
+        "Region": "inverness"
+    },
+    {
+        "Castle": "Dunbar",
+        "Clan": "outand",
+        "Date": "never",
+        "Region": "inverness"
+    }
+  ],
+
+  "Glasgow": [
+    {
+        "Castle": "Dunbar",
+        "Clan": "outand",
+        "Date": "never",
+        "Region": "inverness"
+    },
+    {
+        "Castle": "Dunbar",
+        "Clan": "outand",
+        "Date": "never",
+        "Region": "inverness"
+    }
+  ]
+}]

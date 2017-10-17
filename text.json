@@ -1,44 +1,8 @@
- [
-    {
-        "Castle": "leaoch",
-        "Clan": "outand",
-        "Date": "never",
-        "Region": "inverness",
-        "Image": "../static/images/test.jpg"
-    },
-    {
-        "Castle": "Dunbar",
-        "Clan": "outand",
-        "Date": "never",
-        "Region": "inverness"
-    }
-]
 [
     {
-        "Castle": "dwa", 
-        "Clan": "dwa", 
-        "Date": "dwa", 
-        "Region": "daw"
-    }
-][
-    {
-        "Castle": "daw", 
-        "Clan": "daw", 
-        "Date": "daw", 
-        "Region": "daw"
-    }
-][
-    {
-        "Castle": "dwa", 
-        "Clan": "daw", 
-        "Date": "dwa", 
-        "Region": "daw"
-    }
-][
-    {
-        "Castle": "eaw", 
-        "Clan": "ewa", 
-        "Date": "eaw", 
-        "Region": "eaw"
+        "Castle": "teas", 
+        "Clan": "tawe", 
+        "Date": "eaweaw", 
+        "Region": "tae"
     }
 ]
