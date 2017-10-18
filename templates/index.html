@@ -2,20 +2,18 @@
 {% block content %}
 
   {% if session['logged_in'] %}
-
-<h1> Welcome {{session['username']}} </h1>
+    <h1> Welcome {{session['username']}} </h1>
     {% else %}
+    <h1> Welcome to Albanach Caisleáin.</h1>
+    <h2>In order to navigate the website, you need to log in first.</h2>
+  {% endif %}
 
-    <h1> Welcome to Albanach Caisleáin. Log in <a href="{{ url_for('login') }}"> here </a></h1>
-
-        {% endif %}
-
-{% with messages = get_flashed_messages () %}
-  {% if messages %}
+  {% with messages = get_flashed_messages () %}
+    {% if messages %}
         {% for message in messages %}
         {{ message | safe }}
         {% endfor %}
     {% endif %}
   {% endwith %}
-
+  
 {% endblock %}}

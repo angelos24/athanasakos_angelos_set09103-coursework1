@@ -4,11 +4,15 @@
 
 {% for data in parent_dict %}
 
-{{ data['Castle']}}
 
-{{ data['Clan']}}
-
-
+<div class="card" style="width: 20rem;margin:25px;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">{{ data.Castle}}</h4>
+    <p class="card-text">Some text.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
 
 {% endfor %}

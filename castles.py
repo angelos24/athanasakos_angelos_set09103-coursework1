@@ -44,13 +44,15 @@ def upload():
         region = request.form['region']
         date = request.form['date']
 
-        data = [{'Castle': name,'Clan': clan, 'Region': region, 'Date': date}]
+        castles = []
+        castles.append({'Castle': name,'Clan': clan, 'Region': region, 'Date': date})
 
-        with open('text.json','a') as file:
-            file.write(json.dumps(data, sort_keys=True, indent=4))
-            file.close()
+        f2 = open("castles.json","r+")
+        f2.seek(-2,2)
+        f2.write(json.dumps(castles, indent=4).replace('[',',',1))
+        f2.close()
 
-            flash(' <div class="alert alert-success" role="alert"> <strong>Well done!</strong> You have successfully added a new entry</div')
+        flash(' <div class="alert alert-success" role="alert"> <strong>Well done!</strong> You have successfully added a new entry</div')
 
         return  redirect(url_for('upload'))
     else :
