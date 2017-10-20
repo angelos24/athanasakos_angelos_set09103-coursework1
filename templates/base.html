@@ -3,10 +3,11 @@
 <title>Scottish castles</title>
 <link href="{{ url_for('static', filename='vendors/bootstrap-4/css/bootstrap.min.css') }}" rel="stylesheet" />
 <link href="{{ url_for('static', filename='vendors/bootstrap-4/js/bootstrap.min.js') }}" />
+<link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link" href="{{ url_for('root') }}">Home <span class="sr-only">(current)</span></a>
@@ -29,7 +30,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container ">
     <div class="row">
 
         {% block content %} {% endblock %}
@@ -37,7 +38,7 @@
     </div>
   </div>
   <br>
-  <footer class="footer" style="background-color:black">
+  <footer class="footer bg-dark">
       <div class="container">
         <span class="text-muted">Coursework 1 - 40086764 - Angelos Athanasakos</span>
       </div>

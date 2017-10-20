@@ -1,47 +1,18 @@
 [
     {
         "Castle": "Castle 1",
-        "Clan": "eaw",
-        "Date": "eaw",
-        "Region": "eaw",
-        "image": "/static/images/test.jpg"
+        "Clan": "Clan 1",
+        "Date": "10/10/1719",
+        "Region": "Region 1",
+        "image": "/static/images/test.jpg",
+        "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra."
     }
 ,
     {
         "Castle": "Castle 2",
-        "Clan": "eaw",
-        "Date": "eaw",
-        "Region": "eaw"
-    },
-    {
-        "Castle": "Castle 3",
-        "Clan": "eaw",
-        "Date": "ewa",
-        "Region": "raw"
-    },
-    {
-        "Castle": "Castle 4",
-        "Clan": "eaw",
-        "Date": "eat",
-        "Region": "eaw"
-    }
-,
-    {
-        "Castle": "ewa", 
-        "Clan": "ewa", 
-        "Date": "eaw", 
-        "Region": "eat"
-    },
-    {
-        "Castle": "awe", 
-        "Clan": "eaw", 
-        "Date": "ewa", 
-        "Region": "eaw"
-    },
-    {
-        "Castle": "awe", 
-        "Clan": "eaw", 
-        "Date": "eaw", 
-        "Region": "ea"
+        "Clan": "Clan 2",
+        "Date": "10/10/1710",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.",
+        "Region": "Region 2"
     }
 ]

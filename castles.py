@@ -43,12 +43,10 @@ def upload():
         clan = request.form['clan']
         region = request.form['region']
         date = request.form['date']
-        image = request.files['image']
-
-        UPLOAD_FOLDER = '/static/images'
-
+        description = request.form['description']
+        
         castles = []
-        castles.append({'Castle': name,'Clan': clan, 'Region': region, 'Date': date})
+        castles.append({'Castle': name,'Clan': clan, 'Region': region, 'Date': date, 'Description': description})
 
         f2 = open("castles.json","r+")
         f2.seek(-2,2)
@@ -67,9 +65,7 @@ def regions():
     if not session.get('logged_in'):
         return abort(401)
     else:
-        with open("regions.json","r") as f:
-            parent_dict = json.load(f)
-            return render_template("regions.html", parent_dict=parent_dict), 200
+        return render_template("regions.html"), 200
 
 @app.route("/regions/<path:castle_region>")
 def choose_regions(castle_region):

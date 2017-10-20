@@ -2,6 +2,9 @@
 
 {% block content %}
 <div class="container">
+  <h2 style="text-align:center">Add a new castle</h2>
+</div>
+<div class="container">
   <div class="row">
     <div class="col-4">
       <form action = "" method = "POST" enctype="multipart/form-data">
@@ -10,21 +13,20 @@
                 <input type="text" class="form-control" id="castle" name="castle" placeholder="Castle name" required="true">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Region</label>
+                <label for="region">Region</label>
                 <input type="text" class="form-control" id="region" name="region" placeholder="Region" required="true">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Clan</label>
+                <label for="clan">Clan</label>
                 <input type="text" class="form-control" id="clan" name="clan" placeholder="Clan" required="true">
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Date built</label>
+                <label for="date">Date built</label>
                 <input type="date" class="form-control" id="date" name="date" placeholder="date" required="true">
               </div>
               <div class="form-group">
-                <label for="Image">Choose an image</label>
-                <input type="file" class="form-control-file" name="image" id="image" aria-describedby="fileHelp">
-                <small id="fileHelp" class="form-text text-muted">Choose an image which corresponds to the Castle added.</small>
+                <label for="Description">Description</label>
+                <textarea class="form-control" id="desciption" id="descriptin" name="description" required="true" rows="3"></textarea>
               </div>
               <div class="form-check">
 
