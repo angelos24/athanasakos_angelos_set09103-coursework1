@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if castle_region == 'highlands' %}
+  {% for regions in parent_dict %}
+  {% for results in regions.Highlands %}
+    {{ results.Castle }}
+    {% endfor %}
+  {% endfor %}
+
+
+{% elif castle_region == 'lowlands' %}
+
+{% for regions in parent_dict %}
+{% for results in regions.Lowlands %}
+  {{ results.Castle }}
+  {% endfor %}
+{% endfor %}
+
+{% endif %}
+
+
+{% endblock %}}

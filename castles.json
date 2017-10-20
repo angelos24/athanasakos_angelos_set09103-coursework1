@@ -3,7 +3,8 @@
         "Castle": "Castle 1",
         "Clan": "eaw",
         "Date": "eaw",
-        "Region": "eaw"
+        "Region": "eaw",
+        "image": "/static/images/test.jpg"
     }
 ,
     {
@@ -19,9 +20,28 @@
         "Region": "raw"
     },
     {
-        "Castle": "Castle 4", 
+        "Castle": "Castle 4",
         "Clan": "eaw",
         "Date": "eat",
         "Region": "eaw"
+    }
+,
+    {
+        "Castle": "ewa", 
+        "Clan": "ewa", 
+        "Date": "eaw", 
+        "Region": "eat"
+    },
+    {
+        "Castle": "awe", 
+        "Clan": "eaw", 
+        "Date": "ewa", 
+        "Region": "eaw"
+    },
+    {
+        "Castle": "awe", 
+        "Clan": "eaw", 
+        "Date": "eaw", 
+        "Region": "ea"
     }
 ]

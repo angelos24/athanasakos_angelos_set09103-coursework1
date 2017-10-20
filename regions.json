@@ -1,5 +1,5 @@
 [{
-  "Edinburgh": [
+  "Highlands": [
     {
         "Castle": "Dunbar",
         "Clan": "outand",
@@ -7,14 +7,14 @@
         "Region": "inverness"
     },
     {
-        "Castle": "Dunbar",
+        "Castle": "Dumferline",
         "Clan": "outand",
         "Date": "never",
         "Region": "inverness"
     }
   ],
 
-  "Glasgow": [
+  "Lowlands": [
     {
         "Castle": "Dunbar",
         "Clan": "outand",

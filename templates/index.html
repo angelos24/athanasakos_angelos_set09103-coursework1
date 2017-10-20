@@ -2,7 +2,24 @@
 {% block content %}
 
   {% if session['logged_in'] %}
-    <h1> Welcome {{session['username']}} </h1>
+
+    <div class="containers">
+      <h1 style="text-align:center"> Welcome {{session['username']}} </h1>
+
+      <div style="margin:3rem;" class="row">
+        <h3> Castle of the week: </h3>
+          <div class="card mb-3">
+          <img class="card-img-top" src="/static/images/test.jpg" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">Card title</h4>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
     {% else %}
     <h1> Welcome to Albanach Caisleáin.</h1>
     <h2>In order to navigate the website, you need to log in first.</h2>
@@ -15,5 +32,5 @@
         {% endfor %}
     {% endif %}
   {% endwith %}
-  
+
 {% endblock %}}

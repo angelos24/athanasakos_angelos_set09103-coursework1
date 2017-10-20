@@ -1,11 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for data in parent_dict %}
-
-{{ data['Edinburgh']}}
-<br>
-{{ data['Glasgow']}}
-
-{% endfor %}
+<div class="container">
+  <h1 style="text-align:center">Scottish Regions</h1>
+  <div class="row">
+    <div class="card text-center" style="width: 30rem;margin:40px;">
+      <img class="card-img-top" src="/static/images/test.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Highlands</h4>
+        <p class="card-text"> <a href="highlands">Some text.</a></p>
+      </div>
+    </div>
+    <div class="card text-center" style="width: 30rem;margin:40px;">
+      <img class="card-img-top" src="/static/images/test.jpg" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">Lowlands</h4>
+        <p class="card-text"><a href="lowlands">Some text.</a></p>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}}

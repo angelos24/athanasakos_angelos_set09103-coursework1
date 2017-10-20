@@ -22,14 +22,14 @@ def login():
         else:
             session['logged_in'] = True
             session['username'] = request.form['username']
-            return redirect(url_for('root'))
-    return render_template('login.html')
+            return redirect(url_for('root')), 303
+    return render_template('login.html'), 200
 
 @app.route("/logout")
 def logout():
     session['logged_in'] = False
-    flash('<h1>You have successfully logged out!</h1>')
-    return redirect(url_for('root')), 200
+    flash('<div class="alert alert-success" role="alert"> <strong>Well done!</strong> You have successfully logged out</div>')
+    return redirect(url_for('root')), 303
 
 
 @app.route("/upload", methods=['POST', 'GET'])
@@ -43,6 +43,9 @@ def upload():
         clan = request.form['clan']
         region = request.form['region']
         date = request.form['date']
+        image = request.files['image']
+
+        UPLOAD_FOLDER = '/static/images'
 
         castles = []
         castles.append({'Castle': name,'Clan': clan, 'Region': region, 'Date': date})
@@ -52,14 +55,14 @@ def upload():
         f2.write(json.dumps(castles, indent=4).replace('[',',',1))
         f2.close()
 
-        flash(' <div class="alert alert-success" role="alert"> <strong>Well done!</strong> You have successfully added a new entry</div')
+        flash(' <div class="alert alert-success" role="alert"> <strong>Well done!</strong> You have successfully added a new entry</div>')
 
-        return  redirect(url_for('upload'))
+        return  redirect(url_for('upload')), 303
     else :
         return render_template('upload.html'), 200
 
 
-@app.route("/regions")
+@app.route("/regions/")
 def regions():
     if not session.get('logged_in'):
         return abort(401)
@@ -67,6 +70,18 @@ def regions():
         with open("regions.json","r") as f:
             parent_dict = json.load(f)
             return render_template("regions.html", parent_dict=parent_dict), 200
+
+@app.route("/regions/<path:castle_region>")
+def choose_regions(castle_region):
+    regions = {'highlands':1,'lowlands':2}
+    if not session.get('logged_in'):
+        return abort(401)
+    if castle_region in regions:
+        with open("regions.json","r") as f:
+            parent_dict = json.load(f)
+        return render_template("castle_regions.html", castle_region=castle_region, parent_dict=parent_dict), 200
+    else:
+        return abort(404)
 
 @app.route("/castles")
 def results():
