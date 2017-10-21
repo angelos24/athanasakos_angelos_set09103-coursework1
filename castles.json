@@ -1,18 +1,36 @@
 [
     {
         "Castle": "Castle 1",
-        "Clan": "Clan 1",
+        "Clan": "MacLeoch",
         "Date": "10/10/1719",
-        "Region": "Region 1",
-        "image": "/static/images/test.jpg",
+        "Region": "Highlands",
+        "image": "/static/images/leoch.png",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra."
     }
 ,
     {
         "Castle": "Castle 2",
-        "Clan": "Clan 2",
+        "Clan": "MacMurphy",
         "Date": "10/10/1710",
+        "image": "/static/images/bg.jpg",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.",
-        "Region": "Region 2"
+        "Region": "Highlands"
+    }
+,
+    {
+        "Castle": "Castle 3",
+        "Clan": "MacDonald",
+        "Date": "12/02/1820",
+        "image": "/static/images/macdonald.jpg",
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.",
+        "Region": "Lowlands"
+    }
+,
+    {
+        "Castle": "Castle 4", 
+        "Clan": "MacLeoch", 
+        "Date": "12/02/1890", 
+        "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.", 
+        "Region": "Highlands"
     }
 ]

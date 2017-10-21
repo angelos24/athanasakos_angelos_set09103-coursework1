@@ -16,7 +16,7 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Clan: {{ results.Clan}}</li>
-      <li class="list-group-item">Region: {{ results.Area}}</li>
+      <li class="list-group-item">Area: {{ results.Area}}</li>
       <li class="list-group-item">Date built: {{ results.Date}}</li>
     </ul>
   </div>
@@ -26,7 +26,7 @@
 
 {% elif castle_region == 'lowlands' %}
 <div class="container">
-  <h1 style="text-align:center">All Lowlands castles</h1>
+  <h2 style="text-align:center">All Lowlands castles</h2>
 </div>
 {% for regions in parent_dict %}
 {% for results in regions.Lowlands %}
@@ -38,7 +38,7 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Clan: {{ results.Clan}}</li>
-    <li class="list-group-item">Region: {{ results.Area}}</li>
+    <li class="list-group-item">Area: {{ results.Area}}</li>
     <li class="list-group-item">Date built: {{ results.Date}}</li>
   </ul>
 </div>
