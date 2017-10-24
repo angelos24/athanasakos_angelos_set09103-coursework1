@@ -32,5 +32,19 @@
         "Date": "12/02/1890", 
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.", 
         "Region": "Highlands"
+    },
+    {
+        "Castle": "Dimitris castle", 
+        "Clan": "CYPRIOTS", 
+        "Date": "1961", 
+        "Description": "LIFE SUCKS...IF U FEEL THE SAME PLEASE JOIN", 
+        "Region": "Lowlands"
+    },
+    {
+        "Castle": "eaw", 
+        "Clan": "eat", 
+        "Date": "eaw", 
+        "Description": "ewa", 
+        "Region": "Lowlands"
     }
 ]

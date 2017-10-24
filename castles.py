@@ -18,7 +18,7 @@ def root():
 def login():
     if request.method == 'POST':
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            flash('Invalid Credentials. Please try again.')
+            flash('<div class="alert alert-danger" role="alert"> Invalid Credentials. Please try again.</div>')
         else:
             session['logged_in'] = True
             session['username'] = request.form['username']
@@ -44,7 +44,7 @@ def upload():
         region = request.form['region']
         date = request.form['date']
         description = request.form['description']
-        
+
         castles = []
         castles.append({'Castle': name,'Clan': clan, 'Region': region, 'Date': date, 'Description': description})
 
