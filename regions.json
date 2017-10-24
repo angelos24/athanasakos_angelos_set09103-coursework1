@@ -20,7 +20,7 @@
 
   "Lowlands": [
     {
-        "Castle": "Castl 1",
+        "Castle": "Castle 1",
         "Clan": "MacLeoch",
         "Date": "8/8/1872",
         "Area": "Fife",
@@ -29,7 +29,7 @@
     },
     {
         "Castle": "Castle 2",
-        "Clan": "outand",
+        "Clan": "Outland",
         "Date": "12/03/1890",
         "Area": "Scottish Borders",
         "Description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra."
