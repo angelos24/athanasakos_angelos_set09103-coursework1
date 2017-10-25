@@ -1,26 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-  <h2 style="text-align:center">All Scottish castles</h2>
-</div>
-{% for data in parent_dict %}
-
-<div class="card text-center" style="width: 20rem; margin:25px;">
-  <img style="height:250px;" class="card-img-top" src={{data.image}} alt="Card image cap">
-  <div class="card-block">
-      <h4 class="card-title">{{ data.Castle}}</h4>
-    <p class="card-text">{{ data.Description}}</p>
+  <div class="container">
+    <h2 style="text-align:center">All Scottish castles</h2>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Clan: {{ data.Clan}}</li>
-    <li class="list-group-item">Region: {{ data.Region}}</li>
-    <li class="list-group-item">Date built: {{ data.Date}}</li>
-  </ul>
-  <!-- <div class="card-block">
-    <a href="#" class="card-link"> link</a>
-  </div> -->
-</div>
-
-{% endfor %}
+  {% for data in parent_dict %}
+  <div class="card text-center" style="width: 20rem; margin:25px;">
+    <img style="height:250px;" class="card-img-top" src={{data.image}} alt="Card image cap">
+    <div class="card-block">
+        <h4 class="card-title">{{ data.Castle}}</h4>
+      <p class="card-text">{{ data.Description}}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Clan: {{ data.Clan}}</li>
+      <li class="list-group-item">Region: {{ data.Region}}</li>
+      <li class="list-group-item">Date built: {{ data.Date}}</li>
+    </ul>
+  </div>
+  {% endfor %}
 {% endblock %}}

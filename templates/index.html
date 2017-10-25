@@ -2,8 +2,6 @@
 {% block content %}
 
   {% if session['logged_in'] %}
-
-
       <div class="container">
         <h2 style="text-align:center"> Welcome {{session['username']}} </h2>
       </div>
@@ -18,9 +16,6 @@
             </div>
           </div>
       </div>
-    </div>
-
-
     {% else %}
   <div class="container">
       <div class="row">
@@ -35,8 +30,7 @@
 
               </div>
         <div class="col-5">
-          {% endif %}
-
+    {% endif %}
           {% with messages = get_flashed_messages () %}
             {% if messages %}
                 {% for message in messages %}
