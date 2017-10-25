@@ -9,7 +9,7 @@
     {% for regions in parent_dict %}
       {% for results in regions.Highlands %}
     <div class="card text-center" style="width: 20rem; margin:25px;">
-      <img style="height:250px;" class="card-img-top" src="...." alt="Card image cap">
+      <img style="height:250px;" class="card-img-top" src="{{ results.image }}", alt="Card image cap">
       <div class="card-block">
           <h4 class="card-title">{{ results.Castle }}</h4>
         <p class="card-text">{{ results.Description }}</p>
@@ -31,7 +31,7 @@
     {% for regions in parent_dict %}
       {% for results in regions.Lowlands %}
     <div class="card text-center" style="width: 20rem; margin:25px;">
-      <img style="height:250px;" class="card-img-top" src="...." alt="Card image cap">
+      <img style="height:250px;" class="card-img-top" src="{{ results.image }}" alt="Card image cap">
       <div class="card-block">
           <h4 class="card-title">{{ results.Castle }}</h4>
         <p class="card-text">{{ results.Description }}</p>

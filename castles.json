@@ -30,6 +30,7 @@
         "Castle": "Castle 4",
         "Clan": "MacLeoch",
         "Date": "12/02/1890",
+        "image": "/static/images/macdonald.jpg",
         "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed id semper risus in hendrerit. Diam maecenas sed enim ut sem viverra.",
         "Region": "Highlands"
     }
