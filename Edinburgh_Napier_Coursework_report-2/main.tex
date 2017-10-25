@@ -1,0 +1,132 @@
+% #######################################
+% ########### FILL THESE IN #############
+% #######################################
+\def\mytitle{Coursework 1 Report}
+\def\mykeywords{Fill, These, In, So, google, can, find, your, report}
+\def\myauthor{Angelos Athanasakos}
+\def\contact{4008674@live.napier.ac.uk}
+\def\mymodule{Advanced Web Technologies (set09103)}
+% #######################################
+% #### YOU DON'T NEED TO TOUCH BELOW ####
+% #######################################
+\documentclass[10pt, a4paper]{article}
+\usepackage[a4paper,outer=1.5cm,inner=1.5cm,top=1.75cm,bottom=1.5cm]{geometry}
+\twocolumn
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+%colour our links, remove weird boxes
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%Stop indentation on new paragraphs
+\usepackage[parfill]{parskip}
+%% Arial-like font
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault}
+%Napier logo top right
+\usepackage{watermark}
+%Lorem Ipusm dolor please don't leave any in you final report ;)
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+%give us the Capital H that we all know and love
+\usepackage{float}
+%tone down the line spacing after section titles
+\usepackage{titlesec}
+%Cool maths printing
+\usepackage{amsmath}
+%PseudoCode
+\usepackage{algorithm2e}
+
+\titlespacing{\subsection}{0pt}{\parskip}{-3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+	escapeinside={/*@}{@*/}, language=C++,
+	basicstyle=\fontsize{8.5}{12}\selectfont,
+	numbers=left,numbersep=2pt,xleftmargin=2pt,frame=tb,
+    columns=fullflexible,showstringspaces=false,tabsize=4,
+    keepspaces=true,showtabs=false,showspaces=false,
+    backgroundcolor=\color{white}, morekeywords={inline,public,
+    class,private,protected,struct},captionpos=t,lineskip=-0.4em,
+	aboveskip=10pt, extendedchars=true, breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941}
+}
+
+\thiswatermark{\centering \put(336.5,-38.0){\includegraphics[scale=0.8]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\Edinburgh Napier University\hspace{0.5em}-\hspace{0.5em}\mymodule}
+\date{}
+\hypersetup{pdfauthor=\myauthor,pdftitle=\mytitle,pdfkeywords=\mykeywords}
+\sloppy
+% #######################################
+% ########### START FROM HERE ###########
+% #######################################
+\begin{document}
+	\maketitle
+
+    
+
+	\section{ My Introduction}
+	
+	My idea for a web app containing information derived through my love for castles in general. It  contains information for Scottish Castles such as the Clan which owned it, the date it was built, the region it is located and a short description.
+	
+	The castles are separated to two regions: Highlands and Lowlands. At the homepage there is a "castle of the week" feature that shows the most popular castle for each week.
+
+
+	\section{Design}
+	
+    Python Flask framework gave me the necessary tools to achieve that by exploiting several functions and utilizing JSON format for organizing my data.
+    
+    In addition of using JSON, i took the initiative to manipulate the JSON file by dynamically adding new entries to the catalogue list through the "add a castle". The castle will be added to the "Castles" page but not to the regions/highlands or regions/lowlands since a different JSON file is used.
+    
+    I also took advantage of the session capabilities of Flask. A fake login/logout system was implemented where only the user "admin" can be used to navigate the the page. Once the user is logged in, he gets redirected to the web-root and will have access to all content of the web app. All other users are restricted to all pages apart from the web root where they are prompted to log in.
+	
+	It is worth noting that since i have implemented custom restriction rules, it would be a good idea to add custom 401's to give better feedback to the users. Equivalently the same was done for 404's errors.
+	
+	In terms of look and feel, the Bootstrap 4 framework was used to style my base template which was inherited by the rest. Jinja2 was used to pass the data to the templates.
+	
+	
+	\section{Enhancements}
+    
+    Some of the features that i will like to add more like improvements of the existing functionality of the web app than enhancements. For  example some them are:
+    \begin{itemize}
+      \item \textbf{Registration system:} As it is at the moment there is not registration system and only one predefined. Ideally there would be different level of users with the relevant rights.
+      \item \textbf{Add/delete/edit functionality:} currently the user is able to add a new entry to the "Castles" page but he is not able to categorize them to the two available regions. Also the user should be able to Edit or Delete the castles he added. Finally images should be uploaded and saved dynamically to a JSON file.
+      \item \textbf{Restructure data:} Every Castle should include only an image and its name. There should be a link which leads to more information regarding the castle. Also the user should be able to see relevant castles that belong to equivalent Clan or region. Finally a tag system would be useful for SEO.
+      \item \textbf{Search:} A custom search functionality should be able to search for a particular castle or list relevant castles for the clan searched or region.
+    \end{itemize}
+    
+    
+    
+	\section{Critical Evaluation}
+	
+	Several of the features that do not work or not implement well are because of lack of time and limitation in the use of additional resources. They are the following:
+	\begin{itemize}
+	    \item \textbf{JSON Data:} JSON works perfectly with organizing my data. It creates a perfect combination with Jinja2 for displaying my catalogue in a simple and easy to read manner. Ideally i could have gone more in depth with data nesting but that is to be done at the next Coursework.
+	    \item \textbf{Log-in session} Sessions are incredibly useful and can store a large amount of data. I took advantage of that by doing a fake log-in system. It might work well for a user but ideally there should be a database with user registration and password encryption. 
+	    \item \textbf{Castle of the Week} The Castle of the Week idea is derived from similar features of other websites. The issue with mine is that it is just a static page without any user interaction for deciding which is the most popular castle. it should change dynamically every week and the user should be able to affect the end result. 
+	\end{itemize}
+
+
+	
+    \section{Personal Evaluation}
+    Discovering Python Flask framework prove to be a very interesting approach for me to web development methods. I realized how efficient Python is compared to other similar languages but also how easy is to do the same things but with less code and simpler syntax.
+    
+    Personally it can not be said that i faced difficulties apart from my lack of knowledge and time. I utilized all the necessary resources available to me to tackle all of issues i had faced.
+    
+    Through that experience i managed to learn and utilize many functions of the Flask framework. The most important and significant feature of Python for me was the way it exploits data through JSON and Jinja2 with templates. Then i found very useful all the possibilities of customization of custom errors, combining them with redirects. Finally sessions, even though i didn't take a great advantage of them, seemed to be very powerful with shaping user experience. 
+    
+    In conclusion, i believe i have delivered the best possible outcome within the available time-frame by developing a slightly complex web app with a small user interactivity.
+		
+\end{document}
